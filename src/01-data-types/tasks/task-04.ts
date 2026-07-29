@@ -10,3 +10,35 @@
  * 
  * display the book data using console.log.
  */
+
+interface bookCatalog {
+    numberISBN: string;
+    bookTittle: string;
+    authorName: string;
+    page: number;
+    status: "Borrowed" | "Available"
+
+}
+
+const books: bookCatalog[] = [
+    { 
+        numberISBN: "SI001", 
+        bookTittle: "Anatomic Habits", 
+        authorName: "James Clear", 
+        page: 320, status: "Borrowed" 
+    },
+    { 
+        numberISBN: "F010", 
+        bookTittle: "Laskar Pelangi", 
+        authorName: "Andrea Hirata", 
+        page: 529, status: "Available" 
+    },
+    { numberISBN: "S101", 
+        bookTittle: "Sejarah Singkat Manusia", 
+        authorName: "Yufal Noah Harari", 
+        page: 443, status: "Available" 
+    }
+]
+
+console.log("=== Book Information ===");
+console.log(books);

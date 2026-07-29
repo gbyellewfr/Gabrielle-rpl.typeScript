@@ -1,8 +1,9 @@
 /**
  * Module 01: Data Types — Examples
- *
- * Run: npm run example src/01-data-types/examples/basic-types.ts
- */
+ 
+ * Run: 
+ * npm run example src/01-data-types/examples/basic-types.ts
+*/
 
 // Primitive types
 const studentName: string = "Alice";

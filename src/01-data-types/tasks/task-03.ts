@@ -9,3 +9,19 @@
  * 
  * display the student data using console.log.
  */
+
+interface studentInformation{
+    idStudent:number;
+    fullName:string;
+    age:number;
+    status:boolean;
+}
+
+const students :studentInformation[] = [
+    {idStudent: 1, fullName: "Gabrielle Wahyu", age: 16, status:true},
+    {idStudent: 2, fullName: "Sachien Kageysha", age: 17, status:true},
+    {idStudent: 3, fullName: "Graciella Maria", age: 16, status:false},
+];
+
+console.log("=== Student Information List ===");
+console.log( students );

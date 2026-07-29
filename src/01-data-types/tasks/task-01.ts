@@ -10,7 +10,41 @@
  * Task:
  * 
  * 1. dentify all values that should be stored as variables.
+ * mname, ID student, idterm exam, final exam, assigments, attandance score
  * 2. Determine the most appropriate data type for each variable.
+ * string, int, float, float, float, float
  * 3. Create the variable declarations using TypeScript.
  * 4. Display the student data using console.log.
+ * 
  */
+
+//1. Primitive types
+const studentName: string = "Nadia Putri";
+const IdStudent: string = "ST2026045"
+const extracurricular : boolean = true;
+
+//2. komponen nilai (tanpa menghitung)
+type Score ={
+    midExam: number
+    finalExam: number
+    assignments: number
+    attandance: number
+
+}
+
+const assessment: Score = {
+    midExam: 84,
+    finalExam: 91.5,
+    assignments: 88.5,
+    attandance: 100
+
+}
+
+//3. hasil
+console.log("=== Final score ====");
+console.log({
+    studentName,
+    IdStudent,
+    extracurricular,
+    assessment
+})

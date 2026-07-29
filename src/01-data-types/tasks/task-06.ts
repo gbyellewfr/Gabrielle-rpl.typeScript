@@ -9,3 +9,50 @@
  * 
  * display the product data using console.log.
  */
+
+interface marketPlace{
+    code: string;
+    name: string;
+    price: number;
+    quantity: number;
+    weight: number;
+    rating: number;
+    discount: number;
+
+}
+
+const product1 : marketPlace = {
+    code : "KOPI001",
+    name: "Kapal Api",
+    price: 3000,
+    quantity: 100,
+    weight: 2,
+    rating: 6,
+    discount: 2,
+
+}
+
+const product2 : marketPlace = {
+    code : "TEH002",
+    name: "Melati",
+    price: 3000,
+    quantity: 50,
+    weight: 2,
+    rating: 8,
+    discount: 2,
+
+}
+
+const product3 : marketPlace = {
+    code : "GULa003",
+    name: "Kapal Api",
+    price: 3000,
+    quantity: 200,
+    weight: 2,
+    rating: 6,
+    discount: 5,
+
+}
+
+console.log("=== Product Information ===");
+console.log(product2);
