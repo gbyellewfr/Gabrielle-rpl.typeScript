@@ -14,3 +14,22 @@
  *  - Final payment
  * 2. Display the calculation results.
  */
+
+//1. Primitive types
+const friedRicePrice: number = 18000;
+const mineralWaterPrice: number = 5000;
+const discount: number = 10000;
+const friedRiceQuantity: number = 3;
+const mineralWaterQuantity: number = 2;
+
+//2. Clculate total Price
+const totalFriedRicePrice: number = friedRicePrice * friedRiceQuantity;
+const totalMineralWaterPrice: number = mineralWaterPrice * mineralWaterQuantity;
+const grandTotal: number = totalFriedRicePrice + totalMineralWaterPrice;
+const finalPayment: number = grandTotal - discount;
+
+console.log("=== Lunch Purchase ===");
+console.log(`Total Fried Rice Price: Rp ${totalFriedRicePrice.toLocaleString()}`);
+console.log(`Total Mineral Water Price: Rp ${totalMineralWaterPrice.toLocaleString()}`);
+console.log(`Grand Total: Rp ${grandTotal.toLocaleString()}`);
+console.log(`Final Payment: Rp ${finalPayment.toLocaleString()}`);

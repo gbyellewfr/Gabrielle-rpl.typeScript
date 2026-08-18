@@ -56,3 +56,5 @@ presence: "Present",
 
 console.log("=== Employee Attendance ===");
 console.log(employee1);
+console.log(employee2);
+console.log(employee3);

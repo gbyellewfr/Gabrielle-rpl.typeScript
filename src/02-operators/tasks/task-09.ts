@@ -34,3 +34,48 @@
  * - Free shipping eligibility
 
  */
+
+const mechanicalKeyboardPrice: number = 850000;
+const wirelessMousePrice: number = 275000;
+const monitorStandPrice: number = 420000;
+const mechanicalKeyboardQuantity: number = 1;
+const wirelessMouseQuantity: number = 2;
+const monitorStandQuantity: number = 1; 
+
+const voucherValue: number = 100000;
+const isPremiumMember: boolean = true;
+const rewardPointRate: number = 50000;
+const vatRate: number = 0.11;
+const freeShippingThreshold: number = 1500000;
+
+// Calculate 
+const productSubtotal: number = (mechanicalKeyboardPrice * mechanicalKeyboardQuantity) +
+                                (wirelessMousePrice * wirelessMouseQuantity) +
+                                (monitorStandPrice * monitorStandQuantity);
+
+const membershipDiscount: number = isPremiumMember ? productSubtotal * 0.10 : 0;    
+
+const paymentBeforeTax: number = productSubtotal - membershipDiscount - voucherValue;
+
+const vat: number = paymentBeforeTax * vatRate;
+
+const finalPayment: number = paymentBeforeTax + vat;
+
+const rewardPoints: number = Math.floor(paymentBeforeTax / rewardPointRate);
+
+const isFreeShippingEligible: boolean = isPremiumMember || paymentBeforeTax > freeShippingThreshold;
+
+console.log("=== Checkout Summary ===");
+console.log("Product Subtotal: Rp", productSubtotal.toLocaleString());
+console.log("Membership Discount: Rp", membershipDiscount.toLocaleString());
+console.log("Voucher Deduction: Rp", voucherValue.toLocaleString());
+console.log("Payment Before Tax: Rp", paymentBeforeTax.toLocaleString());
+console.log("VAT (11%): Rp", vat.toLocaleString());
+console.log("Final Payment: Rp", finalPayment.toLocaleString());
+console.log("Reward Points Earned:", rewardPoints);
+console.log("Eligible for Free Shipping:", isFreeShippingEligible ? "Yes" : "No");
+
+
+
+
+

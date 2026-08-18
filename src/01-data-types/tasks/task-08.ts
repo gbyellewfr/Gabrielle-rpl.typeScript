@@ -41,3 +41,7 @@ const record : temperatures[] = [
     {time: "15:00", temperature: 29.3},
 
 ]
+
+console.log("=== Temperature Record ===");
+console.log(record);
+

@@ -46,3 +46,5 @@ const Registered : Register[] = [
     },
 ]
 
+console.log("=== Registered Participants ===");
+console.log(Registered);

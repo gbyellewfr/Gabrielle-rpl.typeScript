@@ -22,3 +22,40 @@
  *  - Calculate the final payment.
 
  */
+
+const mechanicalKeyboardPrice: number = 850000;
+const wirelessMousePrice: number = 275000;
+const mousePadPrice: number = 120000;
+
+const mechanicalKeyboardQuantity: number = 1;
+const wirelessMouseQuantity: number = 2;
+const mousePadQuantity: number = 1;
+
+const isPremiumMember: boolean = true;
+
+// Calculate subtotal
+const subtotal: number = (mechanicalKeyboardPrice * mechanicalKeyboardQuantity) +
+                         (wirelessMousePrice * wirelessMouseQuantity) +
+                         (mousePadPrice * mousePadQuantity);
+
+// Count total purchased items
+let totalItems: number = 0;
+totalItems += mechanicalKeyboardQuantity;
+totalItems += wirelessMouseQuantity;
+totalItems += mousePadQuantity;
+
+const discountThreshold: number = 1000000;
+const discountRate: number = 0.10;
+let discount: number = 0;
+
+if (subtotal > discountThreshold) {
+    discount = subtotal * discountRate;
+}
+
+const finalPayment: number = subtotal - discount;
+
+console.log("=== Shopping Cart Summary ===");
+console.log(`Subtotal: Rp ${subtotal.toLocaleString()}`);
+console.log(`Total Items: ${totalItems}`);
+console.log(`Discount: Rp ${discount.toLocaleString()}`);
+console.log(`Final Payment: Rp ${finalPayment.toLocaleString()}`);

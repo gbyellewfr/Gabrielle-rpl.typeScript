@@ -44,7 +44,7 @@ const product2 : marketPlace = {
 }
 
 const product3 : marketPlace = {
-    code : "GULa003",
+    code : "GULA003",
     name: "Kapal Api",
     price: 3000,
     quantity: 200,
@@ -55,4 +55,6 @@ const product3 : marketPlace = {
 }
 
 console.log("=== Product Information ===");
+console.log(product1);
 console.log(product2);
+console.log(product3);
