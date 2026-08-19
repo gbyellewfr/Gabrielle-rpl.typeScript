@@ -42,6 +42,44 @@ Student Information:
 Student Tasks
 - Declare all variables.
 - Implement the registration workflow.
-- Use nested conditional statements.
+- Use nested conditional statements.8
 - Display the final registration result.
  */
+
+
+let studentName: string = "Nadia Putri";
+let activeStudent: boolean = true;
+let tuitionPaid: boolean = true;
+let passedProgrammingFundamentals: boolean = true;
+let passedDatabaseSystems: boolean = true;
+let gpa: number = 3.45;
+let seatsAvailable: boolean = false;
+
+let finalResult: string;
+
+if (activeStudent && tuitionPaid) {
+
+
+    if (
+        passedProgrammingFundamentals &&
+        passedDatabaseSystems &&
+        gpa >= 3.20
+    ) {
+
+        // Step 3 - Seat Availability
+        if (seatsAvailable) {
+            finalResult = "Registration Successful";
+        } else {
+            finalResult = "Added to Waiting List";
+        }
+
+    } else {
+        finalResult = "Academic Requirements Not Met";
+    }
+
+} else {
+    finalResult = "Registration Rejected";
+}
+
+console.log("Student Name:", studentName);
+console.log("Final Registration Result:", finalResult);
