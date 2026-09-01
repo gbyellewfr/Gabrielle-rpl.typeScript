@@ -62,11 +62,11 @@ for (const transaction of sales) {
 const Average: number = total / sales.length;
 
 console.log("=== Sales Analysis ===");
-console.log(`1. Total Revenue: Rp${total.toLocaleString("id-ID")}`);
-console.log(`2. Highest Transaction: Rp${highest.toLocaleString("id-ID")}`);
-console.log(`3. Lowest Transaction: Rp${lowest.toLocaleString("id-ID")}`);
-console.log(`4. Transactions >= Rp300,000: ${countOver}`);
-console.log(`5. Average Transaction: Rp${Average.toLocaleString("id-ID")}`);
+console.log(`Total Revenue: Rp${total.toLocaleString("id-ID")}`);
+console.log(`Highest Transaction: Rp${highest.toLocaleString("id-ID")}`);
+console.log(`Lowest Transaction: Rp${lowest.toLocaleString("id-ID")}`);
+console.log(`Transactions >= Rp300,000: ${countOver}`);
+console.log(`Average Transaction: Rp${Average.toLocaleString("id-ID")}`);
 
 
 
