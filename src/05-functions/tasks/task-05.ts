@@ -16,7 +16,7 @@
  * 4. Create function to return number of passing students.
  */
 
-const scores = [
+const scores: number[] = [
   82,
   91,
   76,
@@ -30,17 +30,55 @@ const scores = [
 ];
 
 function findHighestScore(scores: number[]): number {
-
+  let highest: number = scores[0];
+  for (const score of scores) {
+    if (score > highest) {
+      highest = score;
+    }
+  }
+  return highest;
 }
 
 function findLowestScore(scores: number[]): number {
-
+  let lowest: number = scores[0];
+  for (const score of scores) {
+    if (score < lowest) {
+      lowest = score;
+    }
+  }
+  return lowest;
 }
 
 function calculateAverage(scores: number[]): number {
-    
+  let total: number = 0;
+  for (const score of scores) {
+    total += score;
+  }
+  return total / scores.length;
 }
 
 function countPassedStudents(scores: number[]): number {
-
+  let passedCount: number = 0;
+  for (const score of scores) {
+    if (score >= 75) {
+      passedCount++;
+    }
+  }
+  return passedCount;
 }
+
+function displayScoreReport(data: number[]): void {
+  const highest = findHighestScore(data);
+  const lowest = findLowestScore(data);
+  const average = calculateAverage(data);
+  const passed = countPassedStudents(data);
+
+  console.log("=== Backend Development Score Report ===");
+  console.log(`Highest Score   : ${highest}`);
+  console.log(`Lowest Score    : ${lowest}`);
+  console.log(`Average Score   : ${average.toFixed(2)}`);
+  console.log(`Passed Students : ${passed}`);
+}
+
+// eksekusi pemanggilan laporan
+displayScoreReport(scores);

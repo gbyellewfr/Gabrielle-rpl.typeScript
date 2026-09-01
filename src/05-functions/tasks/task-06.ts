@@ -12,7 +12,7 @@
  * Create the following functions:
  */
 
-const sales = [
+const sales: number[] = [
   125000,
   780000,
   250000,
@@ -26,21 +26,62 @@ const sales = [
 ];
 
 function calculateTotalSales(sales: number[]): number {
-
+  let total: number = 0;
+  for (const item of sales) {
+    total += item;
+  }
+  return total;
 }
 
+// 3. Fungsi 2: Mencari nominal transaksi tertinggi[cite: 1]
 function findHighestTransaction(sales: number[]): number {
-
+  let highest: number = sales[0];
+  for (const item of sales) {
+    if (item > highest) {
+      highest = item;
+    }
+  }
+  return highest;
 }
 
+// 4. Fungsi 3: Mencari nominal transaksi terendah[cite: 1]
 function findLowestTransaction(sales: number[]): number {
-
+  let lowest: number = sales[0];
+  for (const item of sales) {
+    if (item < lowest) {
+      lowest = item;
+    }
+  }
+  return lowest;
 }
 
+// 5. Fungsi 4: Menghitung rata-rata transaksi harian
 function calculateAverageSale(sales: number[]): number {
-
+  const total: number = calculateTotalSales(sales);
+  return total / sales.length;
 }
 
+// 6. Fungsi 5: Menghitung jumlah transaksi di atas batas nominal tertentu
 function countLargeTransactions(sales: number[], minimumAmount: number): number {
-
+  let count: number = 0;
+  for (const item of sales) {
+    if (item > minimumAmount) {
+      count++;
+    }
+  }
+  return count;
 }
+
+// 7. Eksekusi fungsi & Tampilkan Dashboard ke terminal
+const totalRevenue = calculateTotalSales(sales);
+const maxTransaction = findHighestTransaction(sales);
+const minTransaction = findLowestTransaction(sales);
+const avgTransaction = calculateAverageSale(sales);
+const largeTxCount = countLargeTransactions(sales, 500000);
+
+console.log("=== Daily Sales Dashboard ===");
+console.log(`Total Sales            : Rp${totalRevenue.toLocaleString("id-ID")}`);
+console.log(`Highest Transaction    : Rp${maxTransaction.toLocaleString("id-ID")}`);
+console.log(`Lowest Transaction     : Rp${minTransaction.toLocaleString("id-ID")}`);
+console.log(`Average Transaction    : Rp${avgTransaction.toLocaleString("id-ID")}`);
+console.log(`Transactions > 500k    : ${largeTxCount}`);

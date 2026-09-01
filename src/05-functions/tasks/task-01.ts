@@ -24,3 +24,24 @@
  * 5. Display every student's final grade.
 
  */
+
+// 1. Definisikan fungsi perhitungan nilai akhir (Reusable Function)
+function calculateFinalGrade(
+  assignment: number,
+  midterm: number,
+  finalExam: number
+): number {
+
+  const finalGrade: number = (assignment * 0.30) + (midterm * 0.30) + (finalExam * 0.40);
+
+  return finalGrade;
+}
+
+const alyaFinalGrade: number = calculateFinalGrade(85, 80, 92);
+const budiFinalGrade: number = calculateFinalGrade(78, 75, 81);
+const citraFinalGrade: number = calculateFinalGrade(90, 88, 95);
+
+console.log("=== Students Final Grade Results ===");
+console.log(`Alya's Final Grade  : ${alyaFinalGrade.toFixed(2)}`);
+console.log(`Budi's Final Grade  : ${budiFinalGrade.toFixed(2)}`);
+console.log(`Citra's Final Grade : ${citraFinalGrade.toFixed(2)}`);

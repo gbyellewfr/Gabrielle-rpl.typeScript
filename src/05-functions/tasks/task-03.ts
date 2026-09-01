@@ -11,10 +11,25 @@
  * 5. Display the returned value.
  */
 
-const prices = [
-    250000,
-    180000,
-    95000,
-    420000,
-    125000
+const prices: number[] = [
+  250000,
+  180000,
+  95000,
+  420000,
+  125000
 ];
+
+function calculateTotalPrice(itemPrices: number[]): number {
+  let total: number = 0;
+
+  for (const price of itemPrices) {
+    total += price;
+  }
+
+  return total;
+}
+
+const grandTotal: number = calculateTotalPrice(prices);
+
+console.log("=== Online Store Purchase Summary ===");
+console.log(`Total Purchase Amount : Rp${grandTotal.toLocaleString("id-ID")}`);
