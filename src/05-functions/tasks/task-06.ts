@@ -33,7 +33,6 @@ function calculateTotalSales(sales: number[]): number {
   return total;
 }
 
-// 3. Fungsi 2: Mencari nominal transaksi tertinggi[cite: 1]
 function findHighestTransaction(sales: number[]): number {
   let highest: number = sales[0];
   for (const item of sales) {
@@ -44,7 +43,6 @@ function findHighestTransaction(sales: number[]): number {
   return highest;
 }
 
-// 4. Fungsi 3: Mencari nominal transaksi terendah[cite: 1]
 function findLowestTransaction(sales: number[]): number {
   let lowest: number = sales[0];
   for (const item of sales) {
@@ -55,13 +53,11 @@ function findLowestTransaction(sales: number[]): number {
   return lowest;
 }
 
-// 5. Fungsi 4: Menghitung rata-rata transaksi harian
 function calculateAverageSale(sales: number[]): number {
   const total: number = calculateTotalSales(sales);
   return total / sales.length;
 }
 
-// 6. Fungsi 5: Menghitung jumlah transaksi di atas batas nominal tertentu
 function countLargeTransactions(sales: number[], minimumAmount: number): number {
   let count: number = 0;
   for (const item of sales) {
@@ -72,7 +68,6 @@ function countLargeTransactions(sales: number[], minimumAmount: number): number 
   return count;
 }
 
-// 7. Eksekusi fungsi & Tampilkan Dashboard ke terminal
 const totalRevenue = calculateTotalSales(sales);
 const maxTransaction = findHighestTransaction(sales);
 const minTransaction = findLowestTransaction(sales);

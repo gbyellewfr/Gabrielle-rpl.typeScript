@@ -94,5 +94,5 @@ function printEnrollmentReport(list: Student[]): void {
   console.log(`Multimedia            : ${mmCount}`);
 }
 
-// 7. Eksekusi pemanggilan laporan
+//Eksekusi pemanggilan laporan
 printEnrollmentReport(students);
